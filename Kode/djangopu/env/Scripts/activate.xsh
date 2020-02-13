@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"C:\Users\Harald\Projects\djangopu\env"
+$VIRTUAL_ENV = r"C:\Users\Harald\Projects\puproject\Kode\djangopu\env"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

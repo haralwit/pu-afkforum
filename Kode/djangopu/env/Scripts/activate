@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'C:\Users\Harald\Projects\djangopu\env'; else echo '/C/Users/Harald/Projects/djangopu/env'; fi;)"
+VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'C:\Users\Harald\Projects\puproject\Kode\djangopu\env'; else echo '/C/Users/Harald/Projects/puproject/Kode/djangopu/env'; fi;)"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
