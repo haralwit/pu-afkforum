@@ -1,20 +1,24 @@
 {% extends "blog/base.html" %}
 {% block content %}
-    <article class="media content-section">
-        <img class="rounded article-img" src="{{ object.author.profile.image.url }}">
-        <div class="media-body">
-            <div class="article-metadata">
-                <a class="mr-2" href="#">{{ object.author }}</a>
-                <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
-                {% if object.author == user %}
-                <div>
-                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
-                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
-                </div>
-                {% endif %}
-            </div>
-            <h2 class="article-title">{{ object.title }}</h2>
-            <p class="article-content">{{ object.content }}</p>
+    <article class="media content-section" style="height: 600px; background-color: #fff; border-color: #000;">
+    <div style="display: flex; flex-direction: column; width: 100%; ">
+        <div style="display: flex; flex-direction: row; width: 100%; justify-content: space-between;">
+            <h2 class="article-title" style="color: #000; margin-bottom: 15px; display: inline-block;">{{ object.title }}</h2>
+            <small style="display: inline-block; margin-top: 10px; color: #676767;">{{ object.date_posted|date:"F d, Y" }}</small>
         </div>
+        <div class="media-body" style="margin-bottom: 20px;">
+            <img class="rounded article-img" src="{{ object.author.profile.image.url }}" style="width: 40px; height: 40px; margin-right: 5px;">
+            <a class="mr-2" href="#" style="text-transform: uppercase; text-decoration: underline; color: #ff7300; text-shadow: 2px 2px #0001;">{{ object.author }}</a>
+        </div>
+        <div class="article-metadata" style="border-bottom: 1px, solid #f4511e;"> 
+            {% if object.author == user %}
+            <div>
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+        <p class="article-content">{{ object.content }}</p>
+    </div>
     </article>
 {% endblock content %}
