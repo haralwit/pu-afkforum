@@ -37,8 +37,10 @@ ul {
   color: #fff;
 }
 .afk-logo {
-  width: 150px;
-  margin: -10px 0px -65px 40px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 .site-header .navbar-nav .nav-link {
   color: #000c;
