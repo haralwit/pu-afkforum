@@ -81,9 +81,7 @@ ul {
 .mr-2 {
   color: #f4511e;
 }
-.mr-2:hover {
-  color: #f4511e90;
-}
+
 .list-group-item {
   color: #f4511e;
   border: none;
