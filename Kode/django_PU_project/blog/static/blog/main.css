@@ -28,6 +28,18 @@ ul {
   font-family: "Quantico";
 }
 
+.page-footer {
+  background-color: #393e46;
+}
+.footer-copyright {
+  min-height: 80px;
+  margin-bottom: -40px;
+  color: #fff;
+}
+.afk-logo {
+  width: 150px;
+  margin: -10px 0px -65px 40px;
+}
 .site-header .navbar-nav .nav-link {
   color: #000c;
 }
@@ -65,10 +77,13 @@ ul {
   background-size: cover;
   background-position-y: center;
 }
+
 .mr-2 {
   color: #f4511e;
 }
-
+.mr-2:hover {
+  color: #f4511e90;
+}
 .list-group-item {
   color: #f4511e;
   border: none;
