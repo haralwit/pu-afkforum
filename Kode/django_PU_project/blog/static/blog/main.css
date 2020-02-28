@@ -33,6 +33,7 @@ ul {
 }
 .footer-copyright {
   min-height: 80px;
+  margin-bottom: -40px;
   color: #fff;
 }
 .afk-logo {
