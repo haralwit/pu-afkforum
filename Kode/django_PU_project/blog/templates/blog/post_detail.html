@@ -53,7 +53,7 @@
 
             <form action="{% comment_form_target %}" method="POST">
             {% csrf_token %}
-            {{ form.comment }}
+            {{ form.comment|as_crispy_field }}
             {{ form.honeypot }}
             <style>
                 #id_honeypot {
@@ -65,7 +65,7 @@
             {{ form.timestamp }}
             {{ form.security_hash }}
             <input type="hidden" name="next" value="{% url 'post-detail' post.id %}" />
-            <input type="submit" value="Add comment" id="id_submit" />
+            <input class="btn btn-outline-info" type="submit" value="Add comment" id="id_submit" />
             </form>
         {% else %}
             <p>Please <a href="{% url 'login' %}">log in</a> to leave a comment.</p>
