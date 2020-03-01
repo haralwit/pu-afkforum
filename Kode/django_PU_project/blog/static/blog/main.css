@@ -28,12 +28,26 @@ ul {
   font-family: "Quantico";
 }
 
+.page-footer {
+  background-color: #393e46;
+}
+.footer-copyright {
+  min-height: 80px;
+  margin-bottom: -40px;
+  color: #fff;
+}
+.afk-logo {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
 .site-header .navbar-nav .nav-link {
-  color: #cbd5db;
+  color: #000c;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #fff8;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -48,19 +62,28 @@ ul {
   margin-bottom: 20px;
 }
 .ad-right {
+  content: "";
   width: 100%;
   height: 261px;
-  background-color: darkgrey;
+  background-image: url("/media/369dad50091cd1f154d1eb07a851c5ae.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
 }
 .ad-top {
-  width: 100%;
+  content: "";
   height: 200px;
   margin-bottom: 20px;
-  background-color: darkgrey;
+  background-image: url("/media/download.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
 }
+
 .mr-2 {
   color: #f4511e;
 }
+
 .list-group-item {
   color: #f4511e;
   border: none;
@@ -93,7 +116,7 @@ a.article-title:hover {
 }
 
 .article-metadata a:hover {
-  color: #333;
+  color: #f4511e;
   text-decoration: none;
 }
 
@@ -114,11 +137,10 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
-.nav-item:hover,
-.nav-link:hover {
-  background-color: #fff;
-  color: #f4511e;
-}
 .nav-link {
   font-size: 14px;
+}
+
+.navbar-nav {
+  box-shadow: darkgrey;
 }
