@@ -11,7 +11,7 @@
         </div>
         <div class="media-body" style="margin-bottom: 20px;">
             <img class="rounded article-img" src="{{ object.author.profile.image.url }}" style="width: 40px; height: 40px; margin-right: 5px;">
-            <a class="mr-2" href="#" style="text-transform: none; text-decoration: none; color: #ff7300; text-shadow: 0px 0px #0001;">{{ object.author }}</a>
+            <a class="mr-2" href="{% url 'user-posts' object.author.username %}" style="text-transform: none; text-decoration: none; color: #ff7300; text-shadow: 0px 0px #0001;">{{ object.author }}</a>
         </div>
         <div class="article-metadata" style="border-bottom: 1px, solid #f4511e;"> 
             {% if object.author == user %}
