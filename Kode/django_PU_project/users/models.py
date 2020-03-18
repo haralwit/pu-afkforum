@@ -23,6 +23,7 @@ class Profile(models.Model):
             img.thumbnail(output_size)
             img.save(self.image.path)
 
+    # Denne fungerer ikke slik jeg vil dessverre
     def make_admin(self):
         this_user = object.get(id=1)
         this_user.role = "admin"
