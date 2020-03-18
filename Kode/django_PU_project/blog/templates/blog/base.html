@@ -39,6 +39,7 @@
                   <a class="nav-item nav-link" href="{% url 'post-create' %}">NEW THREAD</a>
                   <a class="nav-item nav-link" href="{% url 'users-profile' %}" style="text-transform: uppercase;">{{ user.username }}</a>
                   <a class="nav-item nav-link" href="{% url 'logout' %}">LOGOUT</a>
+                  <a class="nav-item nav-link" href="{% url 'logout' %}">LOGOUT</a>
                 {% else %}
                   <a class="nav-item nav-link" href="{% url 'login' %}">LOGIN</a>
                   <a class="nav-item nav-link" href="{% url 'users-register' %}">REGISTER</a>

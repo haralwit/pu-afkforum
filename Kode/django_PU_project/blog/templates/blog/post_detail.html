@@ -14,7 +14,7 @@
             <a class="mr-2" href="{% url 'user-posts' object.author.username %}" style="text-transform: none; text-decoration: none; color: #ff7300; text-shadow: 0px 0px #0001;">{{ object.author }}</a>
         </div>
         <div class="article-metadata" style="border-bottom: 1px, solid #f4511e;"> 
-            {% if object.author == user %}
+            {% if object.author == user or user.profile.role == 'admin' %}
             <div>
                 <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
                 <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
