@@ -137,3 +137,6 @@ LOGIN_URL = 'login'
 
 SITE_ID = 1
 
+# This Email Backend is intended only for use during development.
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
