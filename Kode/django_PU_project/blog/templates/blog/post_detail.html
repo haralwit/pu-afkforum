@@ -20,8 +20,12 @@
                 <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
             </div>
             {% endif %}
+            <a class="btn btn-success btn-sm mt-1 mb-1" href="{% url 'post-rating' object_id=object.id score=1  %}">Upvote</a>
+            {{ object.rating.get_difference }}
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-rating' object_id=object.id score=-1  %}">Downvote</a>
         </div>
         <p class="article-content">{{ object.content }}</p>
+
     </div>
     </article>
         <p class = 'lead'>Comments</p>
