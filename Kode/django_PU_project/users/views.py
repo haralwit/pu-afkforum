@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from blog.models import Post
 
 
 def register(request):
@@ -38,3 +39,15 @@ def profile(request):
     context = {"u_form": u_form, "p_form": p_form}
     return render(request, "users/profile.html", context=context)
 
+@login_required
+def adminCheck(request):
+    posts=Post.objects.filter(author=request.user)
+    score = 0    
+    for post in posts:
+        score += post.rating.get_difference()
+    if score >= 1000:
+        request.user.profile.make_admin()
+        context = {'votedadmin': 'yes'}
+    else:
+        context = {'votedadmin': 'no'}
+    return render(request, 'users/admincheck.html', context)

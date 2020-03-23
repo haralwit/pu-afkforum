@@ -5,7 +5,8 @@ from .views import (
     PostCreateView, 
     PostUpdateView, 
     PostDeleteView, 
-    UserPostListView
+    UserPostListView,
+    GiveVote
 )
 from . import views
 
@@ -20,8 +21,7 @@ urlpatterns = [
     path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('about/', views.about, name='blog-about'),
-    # path('post/<int:pk>/rate/<int:score>', AddRatingFromModel(), name="post-rating"), 
-    re_path(r'^post/(?P<object_id>\d+)/rate/(?P<score>[\d\-]+)$', AddRatingFromModel(), {
+    re_path(r'^post/(?P<object_id>\d+)/rate/(?P<score>[\d\-]+)$', GiveVote(), {
         'app_label': 'blog',
         'model': 'Post',
         'field_name': 'rating',

@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.models import ContentType
 from django.views.generic import (
     ListView,
     DetailView,
@@ -10,6 +12,7 @@ from django.views.generic import (
 )
 from django.http import HttpResponse
 from .models import Post
+from updown.views import AddRatingFromModel
 
 
 def home(request):
@@ -84,3 +87,16 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 def about(request):
     return render(request, "blog/about.html", context={"title": "About"})
+
+class GiveVote(AddRatingFromModel):
+    def __call__(self, request, model, app_label, object_id, field_name, score, **kwargs):
+        response = super(GiveVote, self).__call__(request, model, app_label, object_id, field_name, score, **kwargs)
+        message = (response.content).decode("UTF-8")
+        if(response.status_code!=403):
+            messages.success(request,message)
+        else:
+            messages.warning(request,message)
+        return redirect('post-detail', pk=object_id)
+
+
+
