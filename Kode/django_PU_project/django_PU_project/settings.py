@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'django.contrib.sites',
     'django_comments',
+    'updown',
 ]
 
 MIDDLEWARE = [
@@ -136,4 +136,7 @@ LOGIN_URL = 'login'
 
 
 SITE_ID = 1
+
+# This Email Backend is intended only for use during development.
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

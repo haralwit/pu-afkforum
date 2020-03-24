@@ -21,7 +21,12 @@
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Update Profile</button>
             </div>
+            <div>
         </form>
+        <div class="form-group">
+            <p>Do you want to become admin? Check if you have enough votes amongst the community be clicking the button below.</p>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'admin-check' %}">Check</a>
+        </div>
     </div>
 {% endblock content %}
 
