@@ -11,18 +11,18 @@
         </div>
         <div class="media-body" style="margin-bottom: 20px;">
             <img class="rounded article-img" src="{{ object.author.profile.image.url }}" style="width: 40px; height: 40px; margin-right: 5px;">
-            <a class="mr-2" href="{% url 'user-posts' object.author.username %}" style="text-transform: none; text-decoration: none; color: #ff7300; text-shadow: 0px 0px #0001;">{{ object.author }}</a>
+            <a class="mr-2" href="{% url 'user-threads' object.author.username %}" style="text-transform: none; text-decoration: none; color: #ff7300; text-shadow: 0px 0px #0001;">{{ object.author }}</a>
         </div>
         <div class="article-metadata" style="border-bottom: 1px, solid #f4511e;"> 
             {% if object.author == user or user.profile.role == 'admin' %}
             <div>
-                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
-                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'thread-update' object.id %}">Update</a>
+                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'thread-delete' object.id %}">Delete</a>
             </div>
             {% endif %}
-            <a class="btn btn-success btn-sm mt-1 mb-1" href="{% url 'post-rating' object_id=object.id score=1  %}">Upvote</a>
+            <a class="btn btn-success btn-sm mt-1 mb-1" href="{% url 'thread-rating' object_id=object.id score=1  %}">Upvote</a>
             {{ object.rating.get_difference }}
-            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-rating' object_id=object.id score=-1  %}">Downvote</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'thread-rating' object_id=object.id score=-1  %}">Downvote</a>
         </div>
         <p class="article-content">{{ object.content }}</p>
 
@@ -30,8 +30,8 @@
     </article>
         <p class = 'lead'>Comments</p>
         <div class="media-body" style="margin-bottom: 20px;">
-        <!-- {% render_comment_list for post %} -->
-        {% get_comment_list for post as comments %}
+        <!-- {% render_comment_list for thread %} -->
+        {% get_comment_list for thread as comments %}
         {% for comment in comments %}
         <article class="media content-section" style="background-color: #fff; border-color: #000;">
             <div style="display: flex; flex-direction: column; width: 100%; ">
@@ -51,9 +51,9 @@
     </div>
 
         <div>
-        <!-- {% render_comment_form for post %} -->
+        <!-- {% render_comment_form for thread %} -->
         {% if user.is_authenticated %}
-            {% get_comment_form for post as form %}
+            {% get_comment_form for thread as form %}
 
             <form action="{% comment_form_target %}" method="POST">
             {% csrf_token %}
@@ -68,7 +68,7 @@
             {{ form.object_pk }}
             {{ form.timestamp }}
             {{ form.security_hash }}
-            <input type="hidden" name="next" value="{% url 'post-detail' post.id %}" />
+            <input type="hidden" name="next" value="{% url 'thread-detail' thread.id %}" />
             <input class="btn btn-outline-info" type="submit" value="Add comment" id="id_submit" />
             </form>
         {% else %}

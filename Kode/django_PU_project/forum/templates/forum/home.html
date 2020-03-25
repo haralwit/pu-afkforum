@@ -1,15 +1,15 @@
 {% extends "forum/base.html" %}
 {% block content %}
-    {% for post in posts %}
+    {% for thread in threads %}
         <article class="media content-section">
-          <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+          <img class="rounded-circle article-img" src="{{ thread.author.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
-              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+              <a class="mr-2" href="{% url 'user-threads' thread.author.username %}">{{ thread.author }}</a>
+              <small class="text-muted">{{ thread.date_posted|date:"F d, Y" }}</small>
             </div>
-            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
+            <h2><a class="article-title" href="{% url 'thread-detail' thread.id %}">{{ thread.title }}</a></h2>
+            <p class="article-content">{{ thread.content }}</p>
           </div>
         </article>
     {% endfor %}

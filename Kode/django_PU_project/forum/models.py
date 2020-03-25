@@ -5,7 +5,7 @@ from django.urls import reverse
 from updown.fields import RatingField
 
 
-class Post(models.Model):
+class Thread(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
@@ -16,4 +16,4 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post-detail', kwargs={'pk': self.pk})
+        return reverse('thread-detail', kwargs={'pk': self.pk})

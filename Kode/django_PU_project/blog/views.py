@@ -11,55 +11,55 @@ from django.views.generic import (
     DeleteView,
 )
 from django.http import HttpResponse
-from .models import Post
+from .models import Thread
 from updown.views import AddRatingFromModel
 
 
 def home(request):
-    context = {"posts": Post.objects.all()}
+    context = {"threads": Thread.objects.all()}
     return render(request, "forum/home.html", context=context)
 
 
-class PostListView(ListView):
-    model = Post
+class ThreadListView(ListView):
+    model = Thread
     template_name = "forum/home.html"
-    context_object_name = "posts"
+    context_object_name = "threads"
     ordering = ["-date_posted"]  # negative sign inverses order from newest to oldest
     paginate_by = 5
 
 
-class UserPostListView(ListView):
-    model = Post
-    template_name = "forum/user_posts.html"
-    context_object_name = "posts"
+class UserThreadListView(ListView):
+    model = Thread
+    template_name = "forum/user_threads.html"
+    context_object_name = "threads"
     ordering = ["-date_posted"]  # negative sign inverses order from newest to oldest
     paginate_by = 5
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get("username"))
-        return Post.objects.filter(author=user).order_by("-date_posted")
+        return Thread.objects.filter(author=user).order_by("-date_posted")
 
 
-class PostDetailView(DetailView):
-    model = Post
+class ThreadDetailView(DetailView):
+    model = Thread
 
 
-class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    model = Post
+class ThreadDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Thread
     success_url = "/"
 
     def test_func(self):
-        post = self.get_object()
+        thread = self.get_object()
         if (
-            self.request.user == post.author
+            self.request.user == thread.author
             or self.request.user.profile.role == "admin"
         ):
             return True
         return False
 
 
-class PostCreateView(LoginRequiredMixin, CreateView):
-    model = Post
+class ThreadCreateView(LoginRequiredMixin, CreateView):
+    model = Thread
     fields = ["title", "content"]
 
     def form_valid(self, form):
@@ -67,8 +67,8 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = Post
+class ThreadUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Thread
     fields = ["title", "content"]
 
     def form_valid(self, form):
@@ -76,9 +76,9 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return super().form_valid(form)
 
     def test_func(self):
-        post = self.get_object()
+        thread = self.get_object()
         if (
-            self.request.user == post.author
+            self.request.user == thread.author
             or self.request.user.profile.role == "admin"
         ):
             return True
@@ -96,7 +96,7 @@ class GiveVote(AddRatingFromModel):
             messages.success(request,message)
         else:
             messages.warning(request,message)
-        return redirect('post-detail', pk=object_id)
+        return redirect('thread-detail', pk=object_id)
 
 
 

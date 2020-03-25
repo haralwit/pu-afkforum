@@ -11,12 +11,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='post',
+            model_name='thread',
             name='rating_dislikes',
             field=models.PositiveIntegerField(blank=True, default=0, editable=False),
         ),
         migrations.AddField(
-            model_name='post',
+            model_name='thread',
             name='rating_likes',
             field=models.PositiveIntegerField(blank=True, default=0, editable=False),
         ),

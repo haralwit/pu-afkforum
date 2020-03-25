@@ -1,11 +1,11 @@
 from django.urls import path, re_path
 from .views import (
-    PostListView, 
-    PostDetailView, 
-    PostCreateView, 
-    PostUpdateView, 
-    PostDeleteView, 
-    UserPostListView,
+    ThreadListView, 
+    ThreadDetailView, 
+    ThreadCreateView, 
+    ThreadUpdateView, 
+    ThreadDeleteView, 
+    UserThreadListView,
     GiveVote
 )
 from . import views
@@ -14,16 +14,16 @@ from updown.views import AddRatingFromModel
 
 
 urlpatterns = [
-    path('', PostListView.as_view(), name='forum-home'),
-    path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
-    path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
-    path('post/new/', PostCreateView.as_view(), name='post-create'),
-    path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
-    path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
+    path('', ThreadListView.as_view(), name='forum-home'),
+    path('user/<str:username>', UserThreadListView.as_view(), name='user-threads'),
+    path('thread/<int:pk>/', ThreadDetailView.as_view(), name='thread-detail'),
+    path('thread/new/', ThreadCreateView.as_view(), name='thread-create'),
+    path('thread/<int:pk>/update/', ThreadUpdateView.as_view(), name='thread-update'),
+    path('thread/<int:pk>/delete/', ThreadDeleteView.as_view(), name='thread-delete'),
     path('about/', views.about, name='forum-about'),
-    re_path(r'^post/(?P<object_id>\d+)/rate/(?P<score>[\d\-]+)$', GiveVote(), {
+    re_path(r'^thread/(?P<object_id>\d+)/rate/(?P<score>[\d\-]+)$', GiveVote(), {
         'app_label': 'forum',
-        'model': 'Post',
+        'model': 'Thread',
         'field_name': 'rating',
-    }, name="post-rating"),
+    }, name="thread-rating"),
 ]

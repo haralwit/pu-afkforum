@@ -5,12 +5,12 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-borrom mb-4">Delete Post</legend>
-                <h2>Are you sure you want to delete the post "{{ object.title }}"</h2>
+                <legend class="border-borrom mb-4">Delete Thread</legend>
+                <h2>Are you sure you want to delete the thread "{{ object.title }}"</h2>
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
-                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">No, Cancel</a>
+                <a class="btn btn-outline-secondary" href="{% url 'thread-detail' object.id %}">No, Cancel</a>
             </div>
         </form>
     </div>

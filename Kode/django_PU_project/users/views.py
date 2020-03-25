@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
-from forum.models import Post
+from forum.models import Thread
 
 
 def register(request):
@@ -41,10 +41,10 @@ def profile(request):
 
 @login_required
 def adminCheck(request):
-    posts=Post.objects.filter(author=request.user)
+    threads=Thread.objects.filter(author=request.user)
     score = 0    
-    for post in posts:
-        score += post.rating.get_difference()
+    for thread in threads:
+        score += thread.rating.get_difference()
     if score >= 1000:
         request.user.profile.make_admin()
         context = {'votedadmin': 'yes'}
