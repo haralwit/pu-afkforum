@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Quantico&display=swap");
+
+body {
+  background: rgb(233, 230, 230);
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+/*border-bottom: 1px solid #f4511e metadata */
+
+.bg-steel {
+  background-color: #f4511ee3;
+  box-shadow: 1px -2px #fff2 2px;
+  height: 65px;
+  font-family: "Quantico";
+}
+
+.page-footer {
+  background-color: #393e46;
+}
+.footer-copyright {
+  min-height: 80px;
+  margin-bottom: -40px;
+  color: #fff;
+}
+.afk-logo {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.site-header .navbar-nav .nav-link {
+  color: #000c;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #fff8;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+/*0000 151515 f8a145 f07900 d35100 */
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.ad-right {
+  content: "";
+  width: 100%;
+  height: 261px;
+  background-image: url("/media/369dad50091cd1f154d1eb07a851c5ae.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+.ad-top {
+  content: "";
+  height: 200px;
+  margin-bottom: 20px;
+  background-image: url("/media/download.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+}
+
+.mr-2 {
+  color: #f4511e;
+}
+
+.list-group-item {
+  color: #f4511e;
+  border: none;
+  margin-left: -20px;
+}
+.article-title {
+  color: #444444;
+  font-family: "Quantico";
+}
+
+a.article-title:hover {
+  color: #f4511e;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #0008;
+}
+
+.article-metadata a:hover {
+  color: #f4511e;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.nav-link {
+  font-size: 14px;
+}
+
+.navbar-nav {
+  box-shadow: darkgrey;
+}
