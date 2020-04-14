@@ -11,6 +11,7 @@ AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable thirdparty softwar
  - [django-contrib-comments](https://django-contrib-comments.readthedocs.io/en/latest/index.html)
  - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
  - [django-updown](https://github.com/weluse/django-updown)
+ - [bootstrap](https://getbootstrap.com/)
 
 ## Features
 Make your own account to get access to special features such as
