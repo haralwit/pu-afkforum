@@ -1,4 +1,6 @@
+
 ![AFKForum logo](Kode/django_PU_project/media/AFK.PNG)
+
 
 # AFKForum
 
@@ -8,10 +10,12 @@ A link to the gitLab repository: [https://gitlab.stud.idi.ntnu.no/tdt4140-2020/2
 
 ## Tech/framework used
 AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable thirdparty software used is:
- - [django-contrib-comments](https://django-contrib-comments.readthedocs.io/en/latest/index.html)
- - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
- - [django-updown](https://github.com/weluse/django-updown)
- - [bootstrap](https://getbootstrap.com/)
+ - [django-contrib-comments](https://django-contrib-comments.readthedocs.io/en/latest/index.html) - framework for comments
+ - [django-updown](https://github.com/weluse/django-updown) - framework for voting
+ - [SQLite](https://www.sqlite.org/index.html) - database engine
+ - [bootstrap](https://getbootstrap.com/) - frontend component library
+ - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - for controlling the rendering of forms elegantly
+
 
 ## Features
 Make your own account to get access to special features such as
@@ -20,6 +24,13 @@ Make your own account to get access to special features such as
  - Give threads a downvote or an upvote to show what you think!
 
 ## Installation
+### Creating a virtual environment
+It is recommended to make your own environment for this:
+```bash
+python -m venv env
+```
+where `env` can be substituted with whatever you want. 
+### Set up
 Start by cloning the git repo for the project:
 ```bash
 git clone https://gitlab.stud.idi.ntnu.no/tdt4140-2020/20.git
