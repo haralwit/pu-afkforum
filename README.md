@@ -11,7 +11,7 @@ A link to the gitLab repository: [https://gitlab.stud.idi.ntnu.no/tdt4140-2020/2
 ## Motivation
 
 The idea of creating this application was to facilitate a place where gamers could share their achievements, in addition to discuss and ask questions to relevant gaming topics.
-The experince with several gaming forum, motivated og inspired contributors of this project to create a forum, in an attempt to improve the forum idea with adding more suitable functionalites.
+The experince with several gaming forum, motivated and inspired contributors of this project to create a forum, in an attempt to improve the forum idea with adding more suitable functionalites.
 
 ## Code style
 We have used the PEP-8 code conventions for Python.
