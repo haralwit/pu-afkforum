@@ -12,9 +12,18 @@ The idea of creating this application was to facilitate a place where gamers cou
 We are well aware that there is a lot of gaming forums out there, but our goal is to improve the forum idea and make it even greater and with better and more suitable functionalites. 
 
 ## Code style
+We have used the PEP-8 code conventions for Python.
 
 ## Screenshot
 ![AFKForum homepage](media/homepage.png "homepage")
+The homepage of AFKForum.
+
+![AFKForum newthread](media/newthread.png "new thread")
+Making a new thread
+
+![AFKForum comments](media/comments.png "comments")
+Commenting in the comment section of a thread.
+
 
 
 ## Tech/framework used
