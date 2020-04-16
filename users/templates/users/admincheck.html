@@ -1,0 +1,10 @@
+{% extends "forum/base.html" %}
+{% block content %}
+    <div class = "content-section">
+        {% if votedadmin == 'yes' %}
+            <p>Congratulations on becoming admin! The community has faith in you!</p>
+        {% else %}
+            <p>You have yet to become admin. Try making more threads with good content to get more votes.</p>
+        {% endif %}
+    </div>
+{% endblock content %}
