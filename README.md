@@ -93,7 +93,7 @@ For more information, see the Wiki-page called [User Manual](https://gitlab.stud
 If you want to contribute you can fork and make merge-requests.
 
 ## Credits
-We are grateful to Corey Schafer and his YouTube-channel for helping us out with several challenges during the project. 
+We are grateful to Corey Schafer and his [YouTube-channel](https://www.youtube.com/user/schafer5) for helping us out with several challenges during the project. 
 
 ## License
 
