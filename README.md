@@ -97,7 +97,7 @@ For more information, see the Wiki-page called [User Manual](https://gitlab.stud
  - Liv Elise Herstad
 
 ## Contribute
-If you want to contribute you can fork and make merge-requests.
+There is currently no formal process in place for people outside the project to contribute. However, if you really want to contribute you can fork and make merge-requests.
 
 ## Credits
 We are grateful to Corey Schafer and his [YouTube-channel](https://www.youtube.com/user/schafer5) for helping us out with several challenges during the project. 
