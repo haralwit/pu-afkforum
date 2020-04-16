@@ -18,12 +18,19 @@ We are well aware that there is a lot of gaming forums out there, but our goal i
 
 
 ## Tech/framework used
-AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable thirdparty software used is:
+AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable software used is:
+
+**Backend:**
+ - [Python](https://www.python.org/) - the chosen programming language
+ - [Django](https://www.djangoproject.com/) - a Python Web framework
  - [django-contrib-comments](https://django-contrib-comments.readthedocs.io/en/latest/index.html) - framework for comments
  - [django-updown](https://github.com/weluse/django-updown) - framework for voting
  - [SQLite](https://www.sqlite.org/index.html) - database engine
+ 
+ **Frontend:**
  - [bootstrap](https://getbootstrap.com/) - frontend component library
  - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - for controlling the rendering of forms elegantly
+
  
 
 ## Features
