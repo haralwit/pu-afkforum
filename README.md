@@ -1,5 +1,4 @@
-
-![AFKForum logo](Kode/django_PU_project/media/AFK.PNG)
+![AFKForum logo](media/AFK.PNG)
 
 
 # AFKForum
