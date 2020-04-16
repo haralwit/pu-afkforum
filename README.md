@@ -3,13 +3,15 @@
 
 # AFKForum
 
-AFKForum is a website-based forum made for gamers. Through threads they can share thoughts and experiences, as well as discussing whatever gaming related topic their heart desires. The project is developed as a part of a task given in TDT4140, which is a subject at NTNU.
+AFKForum is a website-based forum made for gamers. Through threads you can share thoughts and experiences, as well as discussing whatever gaming related topic you want. 
+This project is being developed of students throught the subject TDT4140 Software Development at NTNU.
 
 A link to the gitLab repository: [https://gitlab.stud.idi.ntnu.no/tdt4140-2020/20](https://gitlab.stud.idi.ntnu.no/tdt4140-2020/20)
 
 ## Motivation
+
 The idea of creating this application was to facilitate a place where gamers could share their achievements, in addition to discuss and ask questions to relevant gaming topics.
-We are well aware that there is a lot of gaming forums out there, but our goal is to improve the forum idea and make it even greater and with better and more suitable functionalites. 
+The experince with several gaming forum, motivated og inspired contributors of this project to create a forum, in an attempt to improve the forum idea with adding more suitable functionalites.
 
 ## Code style
 We have used the PEP-8 code conventions for Python.
@@ -23,8 +25,6 @@ Making a new thread
 
 ![AFKForum comments](media/comments.png "comments")
 Commenting in the comment section of a thread.
-
-
 
 ## Tech/framework used
 AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable software used is:
@@ -40,8 +40,6 @@ AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable software used is:
  - [bootstrap](https://getbootstrap.com/) - frontend component library
  - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - for controlling the rendering of forms elegantly
 
- 
-
 ## Features
 Make your own account to get access to special features such as
  - Make your own threads - anything gaming related goes!
@@ -51,17 +49,17 @@ Make your own account to get access to special features such as
 ## Installation
 It is important that you install python, django and pip before you continue on.
 
-### Cloning the project
+### 1) Cloning the project
 Start by cloning the git repo for the project. This can be done in two ways:
 
- 1. With https:
+1. With https:
 	 ```git clone https://gitlab.stud.idi.ntnu.no/tdt4140-2020/20.git```
 2. With SSH:
   ```git clone git@gitlab.stud.idi.ntnu.no:tdt4140-2020/20.git```
 
 Enter the root-directory of the project you just downloaded.
 
-### Creating a virtual environment
+### 2) Creating a virtual environment
 It is recommended that you make your own environment for this project, but it is not a requirement. (If you don't want to do it, simply skip this next bit.)
 
 To create the virtual environment run this command:
@@ -73,7 +71,7 @@ This should make a folder named `env`. To activate the environment use this comm
 .\env\Scripts\activate
 ```
 
-### Set up
+### 3) Set up
 To install all the required libraries etc. run this command:
 ```
 pip install -r requirements.txt
@@ -106,7 +104,7 @@ For more information, see the Wiki-page called [User Manual](https://gitlab.stud
  - Liv Elise Herstad
 
 ## Contribute
-There is currently no formal process in place for people outside the project to contribute. However, if you really want to contribute you can fork and make merge-requests.
+Currently, there is no formal process in place for people outside the project to contribute. However, if you really want to contribute you can fork and make merge-requests.
 
 ## Credits
 We are grateful to Corey Schafer and his [YouTube-channel](https://www.youtube.com/user/schafer5) for helping us out with several challenges during the project. 
