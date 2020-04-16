@@ -25,25 +25,29 @@ Make your own account to get access to special features such as
 ## Installation
 ### Creating a virtual environment
 It is recommended to make your own environment for this:
-```bash
+```
 python -m venv env
 ```
-where `env` can be substituted with whatever you want. 
+If you want to activate the environment you have made use this command:
+```
+.\env\Scripts\activate
+```
+Note: `env` is the name we have used, but it can be substituted with whatever you want. 
 ### Set up
 Start by cloning the git repo for the project:
-```bash
+```
 git clone https://gitlab.stud.idi.ntnu.no/tdt4140-2020/20.git
 ```
 Then enter the new folder made called `20` in a terminal and run this command to install all the prerequisites:
-```bash
+```
 pip install -r requirements.txt
 ```
 To create a local database (if not already made) run the command:
-```bash
+```
 python manage.py migrate
 ```
 Start the server by running the command:
-```bash
+```
 python manage.py runserver
 ```
 Then go to `localhost:8000` to find the website.
