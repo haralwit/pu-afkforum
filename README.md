@@ -11,10 +11,15 @@ A link to the gitLab repository: [https://gitlab.stud.idi.ntnu.no/tdt4140-2020/2
 ## Motivation
 
 The idea of creating this application was to facilitate a place where gamers could share their achievements, in addition to discuss and ask questions to relevant gaming topics.
-The experience with several gaming forum, motivated and inspired contributors of this project to create a forum, in an attempt to improve the forum idea with adding more suitable functionalites.
+The contributors of this project was tasked by the product owner to make a forum. 
+The contributors of this project was motivated and inspired by their experience with several gaming forums to create their own forum
+The experience with several gaming forums, motivated and inspired contributors of this project to create a forum, in an attempt to improve the forum idea with adding more suitable functionalites.
 
-## Code style
-We have used the PEP-8 code conventions for Python.
+## Features
+Make your own account to get access to special features such as
+ - Make your own threads - anything gaming related goes!
+ - Comment on other people's threads
+ - Give threads a downvote or an upvote to show what you think!
 
 ## Screenshot
 ![AFKForum homepage](media/homepage.png "homepage")
@@ -37,16 +42,14 @@ AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable software used is:
  - [SQLite](https://www.sqlite.org/index.html) - database engine
  
  **Frontend:**
- - [html](https://www.w3schools.com/html/)
- - [CSS](https://www.w3schools.com/css/)
+ - [HTML](https://www.w3schools.com/html/) - standard markup language for the Web
+ - [CSS](https://www.w3schools.com/css/) - for styling HTML
  - [bootstrap](https://getbootstrap.com/) - frontend component library
  - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - for controlling the rendering of forms elegantly
 
-## Features
-Make your own account to get access to special features such as
- - Make your own threads - anything gaming related goes!
- - Comment on other people's threads
- - Give threads a downvote or an upvote to show what you think!
+## Code style
+We have used the PEP-8 code conventions for Python. Read more about this in [Code Quality and Testing](https://www.w3schools.com/css/)
+
 
 ## Installation
 It is important that you install python, django and pip before you continue on.
@@ -80,6 +83,7 @@ pip install -r requirements.txt
 ```
 To create a local database (if not already made) run the command:
 ```
+python manage.py makemigrations
 python manage.py migrate
 ```
 This should make a file named `db.sqlite3` which is the newly created database.
@@ -106,7 +110,7 @@ For more information, see the Wiki-page called [User Manual](https://gitlab.stud
  - Liv Elise Herstad
 
 ## Contribute
-Currently, there is no formal process in place for people outside the project to contribute. However, if you really want to contribute you can fork and make merge-requests.
+Currently, there is no formal process in place for people outside the project to contribute. However, if you want to contribute you can fork and make merge-requests. We appreciate every feedback and contribution!
 
 ## Credits
 We are grateful to Corey Schafer and his [YouTube-channel](https://www.youtube.com/user/schafer5) for helping us out with several challenges during the project. 
