@@ -43,7 +43,7 @@ AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable software used is:
  **Frontend:**
  - [HTML](https://www.w3schools.com/html/) - standard markup language for the Web
  - [CSS](https://www.w3schools.com/css/) - for styling HTML
- - [bootstrap](https://getbootstrap.com/) - frontend component library
+ - [bootstrap](https://getbootstrap.com/) - styling component library
  - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - for controlling the rendering of forms elegantly
 
 ## Code style
