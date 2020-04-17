@@ -11,9 +11,8 @@ A link to the gitLab repository: [https://gitlab.stud.idi.ntnu.no/tdt4140-2020/2
 ## Motivation
 
 The idea of creating this application was to facilitate a place where gamers could share their achievements, in addition to discuss and ask questions to relevant gaming topics.
-The contributors of this project was tasked by the product owner to make a forum. 
-The contributors of this project was motivated and inspired by their experience with several gaming forums to create their own forum
-The experience with several gaming forums, motivated and inspired contributors of this project to create a forum, in an attempt to improve the forum idea with adding more suitable functionalites.
+The motivation for the project was primarily based on the request from our customer to create a meeting place, primarily for Norwegian Gamers. 
+Motivated and inspired by previous experience with other forums, we wanted to improve the forum idea by adding additional functionality.
 
 ## Features
 Make your own account to get access to special features such as
@@ -21,7 +20,7 @@ Make your own account to get access to special features such as
  - Comment on other people's threads
  - Give threads a downvote or an upvote to show what you think!
 
-## Screenshot
+## Screenshots
 ![AFKForum homepage](media/homepage.png "homepage")
 The homepage of AFKForum.
 
