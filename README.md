@@ -10,8 +10,8 @@ A link to the gitLab repository: [https://gitlab.stud.idi.ntnu.no/tdt4140-2020/2
 
 ## Motivation
 
+The motivation for the project was primarily based on the request from our customer to create a meeting place, primarily for Norwegian Gamers.
 The idea of creating this application was to facilitate a place where gamers could share their achievements, in addition to discuss and ask questions to relevant gaming topics.
-The motivation for the project was primarily based on the request from our customer to create a meeting place, primarily for Norwegian Gamers. 
 Motivated and inspired by previous experience with other forums, we wanted to improve the forum idea by adding additional functionality.
 
 ## Features
