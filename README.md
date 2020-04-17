@@ -4,14 +4,14 @@
 # AFKForum
 
 AFKForum is a website-based forum made for gamers. Through threads you can share thoughts and experiences, as well as discussing whatever gaming related topic you want. 
-This project is being developed of students throught the subject TDT4140 Software Development at NTNU.
+This project is being developed by students through the subject TDT4140 Software Development at NTNU.
 
 A link to the gitLab repository: [https://gitlab.stud.idi.ntnu.no/tdt4140-2020/20](https://gitlab.stud.idi.ntnu.no/tdt4140-2020/20)
 
 ## Motivation
 
 The idea of creating this application was to facilitate a place where gamers could share their achievements, in addition to discuss and ask questions to relevant gaming topics.
-The experince with several gaming forum, motivated and inspired contributors of this project to create a forum, in an attempt to improve the forum idea with adding more suitable functionalites.
+The experience with several gaming forum, motivated and inspired contributors of this project to create a forum, in an attempt to improve the forum idea with adding more suitable functionalites.
 
 ## Code style
 We have used the PEP-8 code conventions for Python.
@@ -37,6 +37,8 @@ AFKForum is made in `Django 2.2` with `Python 3.7.6`. Notable software used is:
  - [SQLite](https://www.sqlite.org/index.html) - database engine
  
  **Frontend:**
+ - [html](https://www.w3schools.com/html/)
+ - [CSS](https://www.w3schools.com/css/)
  - [bootstrap](https://getbootstrap.com/) - frontend component library
  - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - for controlling the rendering of forms elegantly
 
@@ -68,7 +70,7 @@ python -m venv env
 ```
 This should make a folder named `env`. To activate the environment use this command:
 ```
-.\env\Scripts\activate
+.\env\Scripts\activate.bat
 ```
 
 ### 3) Set up
